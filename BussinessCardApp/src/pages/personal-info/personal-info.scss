@@ -1,0 +1,35 @@
+page-personal-info {
+    height: 100%;
+    display: block;
+    
+    .profilePicture{
+        width: 100%; 
+        height: 80px;
+
+        overflow: hidden;
+
+        .profileName{
+            margin: auto;
+            margin-left: 5%;
+
+            .name{
+                font-size: 22px !important;
+                margin: 0 !important;
+            }
+            .title{
+                margin: 0 !important;
+            }
+        }
+    }
+
+    div.avatar {
+        /* cambia estos dos valores para definir el tamaño de tu círculo */
+        height: 80px;
+        width: 80px;
+        /* los siguientes valores son independientes del tamaño del círculo */
+        background-repeat: no-repeat;
+        background-position: 50%;
+        border-radius: 50%;
+        background-size: 100% auto;
+    }
+}

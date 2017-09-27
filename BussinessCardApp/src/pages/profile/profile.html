@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar text-center color="primary">
+    <ion-title>PERFIL</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="profilePicture">
+    <div class="avatar" style="background-image: url(../assets/profilePicture.jpg)"></div>
+  </div>
+
+  <ion-fab bottom right>
+    <button ion-fab color="alternate" mini><ion-icon name="apps"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button color="primary" ion-fab (click)="editInfo()"><ion-icon name="create"></ion-icon></button>
+      <button color="primary" ion-fab><ion-icon name="qr-scanner"></ion-icon></button>
+      <ion-fab class="shared">
+          <button color="secondary" ion-fab mini><ion-icon name="md-share"></ion-icon>
+            <ion-fab-list side="middle">
+              <button color="facebook" ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+              <button color="instagram" ion-fab><ion-icon name="logo-instagram"></ion-icon></button>
+              <button color="linkedin" ion-fab><ion-icon name="logo-linkedin"></ion-icon></button>
+              <button color="googleplus" ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+            </ion-fab-list>
+          </button> 
+        </ion-fab>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

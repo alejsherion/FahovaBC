@@ -1,0 +1,35 @@
+page-profile {
+    height: 100%;
+    display: block;
+    vertical-align: middle;
+    
+    .profilePicture{
+        width: 160px; 
+        height: 160px;
+        text-align: center;
+
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    img{
+        border-radius: 50%;
+    }
+
+    div.avatar {
+        /* cambia estos dos valores para definir el tamaño de tu círculo */
+        height: 160px;
+        width: 160px;
+        /* los siguientes valores son independientes del tamaño del círculo */
+        background-repeat: no-repeat;
+        background-position: 50%;
+        border-radius: 50%;
+        background-size: 100% auto;
+    }
+
+    .shared{
+        top: -55px;
+        right: -66px;
+    }
+}
