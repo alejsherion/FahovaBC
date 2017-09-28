@@ -8,11 +8,11 @@ export class User {
     companyTmbr: string;
     title: string;
     company: string;
-    companyId: number;
+    companyId: string;
     position: string;
     admissionDate: Date;
-    phone: number;
-    movil: number;
+    phone: string;
+    movil: string;
     email: string;
     image: string;
 
@@ -20,13 +20,18 @@ export class User {
     get age(): number { return this._age; }
     set age (_age: number){
         if (this._person.birthDate) {
-            let timeDiff = Math.round(Date.now() - this._person.birthDate.getUTCFullYear());
+            let timeDiff = Math.round(Date.now() - this._person.birthDate.getUTCDay());
             this._age = Math.floor((timeDiff / (1000 * 3600 * 24)) / 365);
         }
     }
     private _alias: string;
     get alias(): string { return this._alias; }
-    set alias(_alias: string) { if(this._alias === "") this._alias = `${this.name} ${this.lastname}` }
+    set alias(_alias: string) { 
+        if(this._alias === "") 
+            this._alias = `${this.name} ${this.lastname}` 
+        else
+            this._alias = _alias;
+    }
     
     constructor(private _person: Person) {
         this.name = _person.name;
@@ -44,6 +49,10 @@ export class User {
         this.movil = _person.contact.movil;
         this.email = _person.contact.email;
         this.image = _person.image;
+        this.alias = _person.alias;
+        this.age = _person.age;
+
+        console.log(_person);
     }
 
 }
@@ -67,13 +76,13 @@ export interface ProfesionalInfo {
     companyTmbr: string,
     title: string,
     company: string,
-    companyId: number,
+    companyId: string,
     position: string,
     admissionDate: Date
 }
 
 export interface ContactInfo {
-    phone: number,
-    movil: number,
+    phone: string,
+    movil: string,
     email: string
 }

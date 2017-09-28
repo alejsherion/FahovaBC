@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import {  User } from '../../model/person';
+import { ProfileService } from '../../providers/profile-service';
 
 @Component({
   selector: 'page-personal-info',
@@ -15,11 +16,14 @@ export class PersonalInfoPage {
   visibleContactPanel: boolean = false;
   visiblePersonalizePanel: boolean = false;
 
-  constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+  constructor(
+    public viewCtrl: ViewController, 
+    public navParams: NavParams,
+    public _profileService: ProfileService) {
   }
 
   ionViewDidLoad() {
-    
+    this.person = this._profileService.getPersonalInfo();
   }
 
   dismiss(){

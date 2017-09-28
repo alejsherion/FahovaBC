@@ -7,9 +7,15 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding *ngIf='person != null'>
   <div class="profilePicture">
     <div class="avatar" style="background-image: url(../assets/profilePicture.jpg)"></div>
+  </div>
+
+  <div class="Info">
+    <ion-label class="Info-title Info-right">{{ person.title }}</ion-label>
+    <ion-label class="Info-name" color="primary" >{{ person.alias }}</ion-label>
+    <ion-label class="Info-title Info-left">{{ person.position }}</ion-label>
   </div>
 
   <ion-fab bottom right>
