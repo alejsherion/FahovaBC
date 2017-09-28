@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Person, User } from '../model/person';
+import { Contact } from '../model/contacts';
 
 
 @Injectable()
@@ -36,6 +37,29 @@ export class ProfileService {
       },
       image: null
     });
+  }
+
+  getContacs() : Contact[] {
+    let ct: Contact[] = [];
+
+    ct.push(new Contact({alias: 'Brii Suaza', Id: 1, gender: 'F'}))
+    ct.push(new Contact({alias: 'Felipe Beltran', Id: 2, gender: 'M'}))
+    ct.push(new Contact({alias: 'Juan Tamayo', Id: 3, gender: 'M'}))
+    ct.push(new Contact({alias: 'Omar Calderón', Id: 4, gender: 'M'}))
+    ct.push(new Contact({alias: 'John Tumay', Id: 5, gender: 'M'}))
+    ct.push(new Contact({alias: 'Cristian Salzar', Id: 6, gender: 'M'}))
+    ct.push(new Contact({alias: 'Juliana Segura', Id: 7, gender: 'F'}))
+    ct.push(new Contact({alias: 'Camilo Suarez', Id: 8, gender: 'M'}))
+    ct.push(new Contact({alias: 'Diana Vargas', Id: 9, gender: 'F'}))
+    ct.push(new Contact({alias: 'Henry Vargas', Id: 1, gender: 'M'}))
+    ct.push(new Contact({alias: 'Natalia Villalobos', Id: 11, gender: 'F'}))
+    ct.push(new Contact({alias: 'Camilo Florez', Id: 12, gender: 'M'}))
+    ct.push(new Contact({alias: 'Rossel Narvaez', Id: 13, gender: 'M'}))
+    ct.push(new Contact({alias: 'Karina Soto', Id: 14, gender: 'F'}))
+    ct.push(new Contact({alias: 'Martha Calderón', Id: 15, gender: 'F'}))
+    ct.push(new Contact({alias: 'Diego Camacho', Id: 16, gender: 'M'}))
+
+    return ct;
   }
   
 }

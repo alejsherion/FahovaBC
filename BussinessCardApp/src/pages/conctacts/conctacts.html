@@ -1,18 +1,33 @@
-<!--
-  Generated template for the ConctactsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>conctacts</ion-title>
+  <ion-navbar text-center color="primary">
+    <ion-title>CONTACTOS</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <ion-searchbar [(ngModel)]="inputSearch" 
+                 [showCancelButton]="true" 
+                 (ionInput)="onInput($event)" 
+                 (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  <ion-list>
+    <ion-item-sliding *ngFor="let c of contacts; let i = index" >
+      
+      <ion-item>
+        {{ c.alias }}
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button (click)="favorite(item)">Favorite</button>
+        <button ion-button color="danger" (click)="share(item)">Share</button>
+      </ion-item-options>
+  
+      <ion-item-options side="right">
+        <button ion-button (click)="unread(item)">Unread</button>
+      </ion-item-options>
+      
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
