@@ -1,3 +1,4 @@
+import { FavoritesPipe } from './../pipes/favorites/favorites';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule, LOCALE_ID } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -13,6 +14,9 @@ import { ProfileService } from '../providers/profile-service';
 import { ProfilePage } from '../pages/profile/profile';
 import { PersonalInfoPage } from '../pages/personal-info/personal-info';
 import { HttpModule } from '@angular/http';
+
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 // // AF2 Settings
 // export const FIREBASECONFIG = {
@@ -33,12 +37,14 @@ import { HttpModule } from '@angular/http';
     ConctactsPage,
     PreferencesPage,
     ProfilePage,
-    PersonalInfoPage
+    PersonalInfoPage,
+    FavoritesPipe
   ],
   imports: [
     HttpModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    NgxQRCodeModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +61,8 @@ import { HttpModule } from '@angular/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     {provide: LOCALE_ID,useValue: "es-CO"},
-    ProfileService
+    ProfileService,
+    BarcodeScanner
   ]
 })
 export class AppModule {}

@@ -14,4 +14,5 @@ export class MyCardPage {
     console.log('ionViewDidLoad MyCardPage');
   }
 
+  createdCode: string = "1075211187";
 }

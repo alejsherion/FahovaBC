@@ -51,8 +51,6 @@ export class User {
         this.image = _person.image;
         this.alias = _person.alias;
         this.age = _person.age;
-
-        console.log(_person);
     }
 
 }

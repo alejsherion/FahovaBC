@@ -1,3 +1,17 @@
 page-conctacts {
+    .sideButton{
+        width: 50px;
+        &-Text{
+            margin: 0 !important;
+            font-size: smaller;
+        }
+    }
 
+    .item-md ion-thumbnail ion-img, .item-md ion-thumbnail img, .item-ios ion-thumbnail ion-img, .item-ios ion-thumbnail img {
+        border-radius: 50%;
+    }
+
+    ion-searchbar {
+        background-color: map-get($colors, primary) !important;
+    }
 }

@@ -25,11 +25,27 @@ export class ConctactsPage {
   }
 
   onInput(e){
+    this.contacts = this._profileService.getContacs()
+    if(e.cancelable){
+      return;
+    }
 
+    let filterContacts: Contact[] = [];
+    for(let c of this.contacts){
+      if(c.alias.toLowerCase().indexOf(this.inputSearch.toLowerCase()) !== -1){
+        filterContacts.push(c);
+      }
+    }
+    
+    this.contacts = filterContacts;
   }
 
   onCancel(e){
+    this.contacts = this._profileService.getContacs()
+  }
 
+  setfavorite(contact: Contact){
+    contact.isFavorite = !contact.isFavorite
   }
 
 }
