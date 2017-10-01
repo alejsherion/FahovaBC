@@ -17,6 +17,7 @@ import { HttpModule } from '@angular/http';
 
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { QrCodePage } from '../pages/qr-code/qr-code';
 
 // // AF2 Settings
 // export const FIREBASECONFIG = {
@@ -38,7 +39,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     PreferencesPage,
     ProfilePage,
     PersonalInfoPage,
-    FavoritesPipe
+    FavoritesPipe,
+    QrCodePage
   ],
   imports: [
     HttpModule,
@@ -54,7 +56,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     ConctactsPage,
     PreferencesPage,
     ProfilePage,
-    PersonalInfoPage
+    PersonalInfoPage,
+    QrCodePage
   ],
   providers: [
     StatusBar,

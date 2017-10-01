@@ -48,4 +48,10 @@ export class ConctactsPage {
     contact.isFavorite = !contact.isFavorite
   }
 
+  deleteContact(contact: Contact){
+    let index = this.contacts.indexOf(contact, 0);
+    if (index > -1) {
+      this.contacts.splice(index, 1);
+    }
+  }
 }

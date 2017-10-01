@@ -15,8 +15,17 @@ export class FavoritesPipe implements PipeTransform {
    * Takes a value and makes it lowercase.
    */
   transform(contacts: Contact[]) {
-    if(contacts == null)
+    if (contacts == null)
       return [];
-    return contacts.sort((a,b) => (!a.isFavorite && b.isFavorite) ? 1 : -1 );
+
+    return contacts.sort((a, b) => {
+      if (a.alias < b.alias) {
+        return -1;
+      } else if (a.alias > b.alias) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }).sort((a, b) => (!a.isFavorite && b.isFavorite) ? 1 : -1);
   }
 }

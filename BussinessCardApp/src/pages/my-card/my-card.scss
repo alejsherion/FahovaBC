@@ -1,3 +1,41 @@
 page-my-card {
 
+    .profilePicture{
+        width: 100px; 
+        height: 100px;
+        text-align: center;
+
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    div.avatar {
+        /* cambia estos dos valores para definir el tamaño de tu círculo */
+        height: 100px;
+        width: 100px;
+        /* los siguientes valores son independientes del tamaño del círculo */
+        background-repeat: no-repeat;
+        background-position: 50%;
+        border-radius: 50%;
+        background-size: 100% auto;
+    }
+
+    .input-wrapper{
+        display: block !important;
+
+        & .label{
+            margin: 0;
+        }
+    }
+
+    .scroll-content {
+        position: absolute;
+        top: 50px;
+        margin-top: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

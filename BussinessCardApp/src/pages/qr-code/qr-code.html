@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <ion-title text-center>Código QR</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+            <span showWhen="ios">Cancelar</span>
+            <ion-icon name="close" showWhen="android, windows"></ion-icon>
+          </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card [ngStyle]="{'border': 'none'}">
+    <ngx-qrcode qrc-value="AlejandroVargas_1075211187"></ngx-qrcode>
+  </ion-card>
+</ion-content>

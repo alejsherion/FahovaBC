@@ -7,11 +7,15 @@ page-conctacts {
         }
     }
 
-    .item-md ion-thumbnail ion-img, .item-md ion-thumbnail img, .item-ios ion-thumbnail ion-img, .item-ios ion-thumbnail img {
-        border-radius: 50%;
-    }
-
     ion-searchbar {
         background-color: map-get($colors, primary) !important;
+    }
+    .searchbar-ios.searchbar-show-cancel.searchbar-has-focus .searchbar-ios-cancel{
+        color: white;
+    }
+
+    img {
+        width: 60px !important;
+        height: 60px !important;
     }
 }

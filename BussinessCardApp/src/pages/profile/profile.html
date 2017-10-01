@@ -14,8 +14,19 @@
 
   <div class="Info">
     <ion-label class="Info-title">{{ person.title }}</ion-label>
-    <ion-label class="Info-name" color="primary" >{{ person.alias }}</ion-label>
+    <ion-label class="Info-name" color="primary">{{ person.alias }}</ion-label>
     <ion-label class="Info-title Info-right">{{ person.position }}</ion-label>
+  </div>
+
+  <div text-center>
+      <ion-label color="primary">{{ person.company }}</ion-label>
+      <ion-label color="primary">{{ person.companyId }}</ion-label>
+  </div>
+    
+  <br>
+
+  <div text-justify>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim odit vero nisi ipsa quia dicta tenetur velit, doloremque omnis, minima placeat fuga provident minus laborum quaerat dolore neque cupiditate cum?</p>
   </div>
 
   <ion-fab bottom right>
@@ -24,15 +35,15 @@
       <button color="primary" ion-fab (click)="editInfo()"><ion-icon name="create"></ion-icon></button>
       <button color="primary" ion-fab (click)="scanCode()"><ion-icon name="qr-scanner"></ion-icon></button>
       <ion-fab class="shared">
-          <button color="secondary" ion-fab mini><ion-icon name="md-share"></ion-icon>
+        <button color="secondary" ion-fab mini><ion-icon name="md-share"></ion-icon>
             <ion-fab-list side="middle">
               <button color="facebook" ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
-              <button color="instagram" ion-fab><ion-icon name="logo-instagram"></ion-icon></button>
-              <button color="linkedin" ion-fab><ion-icon name="logo-linkedin"></ion-icon></button>
-              <button color="googleplus" ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
-            </ion-fab-list>
-          </button> 
-        </ion-fab>
+        <button color="instagram" ion-fab><ion-icon name="logo-instagram"></ion-icon></button>
+        <button color="linkedin" ion-fab><ion-icon name="logo-linkedin"></ion-icon></button>
+        <button color="googleplus" ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+    </button>
+    </ion-fab>
     </ion-fab-list>
   </ion-fab>
 

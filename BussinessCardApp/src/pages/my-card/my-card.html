@@ -8,10 +8,44 @@
 
 
 <ion-content padding>
-  <ion-card>
-    <ngx-qrcode qrc-value="1075211187"></ngx-qrcode>
+
+  <ion-card *ngIf="person != null">
+
+    <ion-fab center bottom>
+      <button ion-fab [ngStyle]="{'font-size': 'xx-large'}" (click)="viewQR()">
+        <i class="fa fa-qrcode" aria-hidden="true"></i>
+      </button>
+    </ion-fab>
+
+    <div class="profilePicture">
+      <div class="avatar" style="background-image: url(assets/profilePicture.jpg)"></div>
+    </div>
+
     <ion-card-content>
-      <p>Value: '1075211187'</p>
+      <ion-item text-center>
+        <ion-label color="primary">{{ person.company }}</ion-label>
+        <ion-label color="primary">{{ person.companyId }}</ion-label>
+      </ion-item>
+
+      <br>
+      <br>
+
+      <ion-item text-center  >
+        <ion-label color="primary" [ngStyle]="{'font-weight': 'bold'}">{{ person.name }}</ion-label>
+        <ion-label color="primary" [ngStyle]="{'font-weight': 'bold'}">{{ person.lastname }}</ion-label>
+        <ion-label color="primary">{{person.tipeDoc}} {{ person.numDoc }}</ion-label>
+      </ion-item>
+
+      <br>
+      <br>
+
+      <ion-item text-center  >
+          <ion-label color="primary">Teléfono: {{ person.phone }}</ion-label>
+          <ion-label color="primary">Celular: {{ person.movil }}</ion-label>
+          <ion-label color="primary">{{ person.email }}</ion-label>
+        </ion-item>
     </ion-card-content>
+
   </ion-card>
+
 </ion-content>
